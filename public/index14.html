@@ -6,6 +6,7 @@
   <title>Taste Buds</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/likes.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
@@ -29,21 +30,21 @@
 <body class="bg-[#F4ECE1] flex flex-col min-h-screen">
   <header class="bg-primary-dark py-2.5">
     <nav class="flex justify-between items-center px-[10%]">
-      <div class="hamburger md:hidden text-white text-3xl cursor-pointer">☰</div>
+      <div class="hamburger md:hidden text-white text-3xl cursor-pointer" >☰</div>
       
-      <a href="#" class="logo hidden md:block">
-        <img src="./chef-logo-design-cooking-inspiration-vectorv25_405409-original (1) (1) (1).svg" 
+      <a href="index.html" class="logo hidden md:block">
+        <img src="chef-logo-design-cooking-inspiration-vectorv25_405409-original (1) (1) (1).svg" 
              alt="Logo" class="h-12">
       </a>
 
       <ul class="nav-links fixed md:relative top-0 left-0 w-64 h-full md:w-auto md:h-auto bg-primary-dark/80 md:bg-transparent 
           transform -translate-x-full md:transform-none transition-transform duration-300 z-50 flex flex-col md:flex-row 
           gap-7 md:gap-8 pt-16 md:pt-0 pl-5 md:pl-0">
-        <li><a href="./index.html" class="text-white hover:text-primary-orange text-lg">Home</a></li>
-        <li><a href="#" class="text-white hover:text-primary-orange text-lg">About</a></li>
-        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Dishes</a></li>
-        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Restaurant</a></li>
-        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Contact</a></li>
+        <li><a href="index.html" class="text-white hover:text-primary-orange text-lg">Home</a></li>
+        <li><a href="about.html" class="text-white hover:text-primary-orange text-lg">About</a></li>
+        <li><a href="index14.html" class="text-white hover:text-primary-orange text-lg">Dishes</a></li>
+        <li><a href="book-table.html" class="text-white hover:text-primary-orange text-lg">Restaurant</a></li>
+        <li><a href="contact.html" class="text-white hover:text-primary-orange text-lg">Contact</a></li>
       </ul>
 
       <div class="nav-right flex items-center gap-4">
@@ -57,8 +58,8 @@
               </svg>
           </button>
       </div>
-      <a href="./index Order.html">
-        <svg class="w-6 h-6 text-[#FFAE6D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="index Order.html">
+          <svg class="w-6 h-6 text-[#FFAE6D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
               </path>
@@ -66,11 +67,11 @@
       </a>
         <div class="profile-menu relative cursor-pointer" onclick="toggleProfileMenu()">
           <img src="profile.png" alt="Profile" class="w-10 h-10 rounded-full border-2 border-white">
+          
         </div>
       </div>
     </nav>
   </header>
-
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
@@ -144,9 +145,9 @@
         
         <!-- Navigation Buttons -->
         <div class="flex justify-center space-x-4 mt-6">
-          <button class="px-8 py-2 bg-[#95D2B3] text-white rounded-full hover:bg-[#7BBF97] border border-black transition">Next</button>
-        <a href="./index.html">  <button class="px-8 py-2 bg-[#F28585] text-white rounded-full hover:bg-[#F16B6B] border border-black transition">Return</button>
-       </a> </div>
+            <button class="px-8 py-2 bg-green-400 text-white rounded-full hover:bg-green-500 transition">Next</button>
+            <button class="px-8 py-2 bg-red-400 text-white rounded-full hover:bg-red-500 transition">Return</button>
+        </div>
     </main>
 
     <footer class="bg-primary-dark text-white mt-auto">
@@ -157,13 +158,13 @@
             <p class="text-gray-300 mt-2">Phone: +216 25 356 031</p>
             <p class="text-gray-300">Email: tasteBuds@gustavo.tn</p>
             <div class="flex gap-4 mt-4">
-              <a href="#" class="text-white hover:text-primary-orange">
+              <a href="https://facebook.com" class="text-white hover:text-primary-orange">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="#" class="text-white hover:text-primary-orange">
+              <a href="https://instagram.com" class="text-white hover:text-primary-orange">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="#" class="text-white hover:text-primary-orange">
+              <a href="https://linkedin.com" class="text-white hover:text-primary-orange">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
@@ -172,22 +173,22 @@
           <div class="mb-8 md:mb-0">
             <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
             <ul class="space-y-2 text-gray-300">
-              <li><a href="#" class="hover:text-primary-orange">Home</a></li>
-              <li><a href="#" class="hover:text-primary-orange">About us</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Dishes</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Restaurants</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Forum</a></li>
+              <li><a href="index.html" class="hover:text-primary-orange">Home</a></li>
+              <li><a href="about.html" class="hover:text-primary-orange">About us</a></li>
+              <li><a href="index14.html" class="hover:text-primary-orange">Dishes</a></li>
+              <li><a href="book-table.html" class="hover:text-primary-orange">Restaurants</a></li>
+              <li><a href="forum.html" class="hover:text-primary-orange">Forum</a></li>
             </ul>
           </div>
     
           <div class="mb-8 md:mb-0">
             <h3 class="text-lg font-semibold mb-4">Our Services</h3>
             <ul class="space-y-2 text-gray-300">
-              <li><a href="#" class="hover:text-primary-orange">Top Restaurants</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Top Dishes</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Delivery</a></li>
-              <li><a href="#" class="hover:text-primary-orange">Orders</a></li>
-              <li><a href="#" class="hover:text-primary-orange">3D Dishes</a></li>
+              <li><a href="restaurants.html" class="hover:text-primary-orange">Top Restaurants</a></li>
+              <li><a href="index14.html" class="hover:text-primary-orange">Top Dishes</a></li>
+              <li><a href="delivery.html" class="hover:text-primary-orange">Delivery</a></li>
+              <li><a href="index Order.html" class="hover:text-primary-orange">Orders</a></li>
+              <li><a href="index.html" class="hover:text-primary-orange">3D Dishes</a></li>
             </ul>
           </div>
     
@@ -229,21 +230,29 @@
             renderer.setPixelRatio(window.devicePixelRatio);
             container.appendChild(renderer.domElement);
 
+            // Add after creating the renderer:
+
+            renderer.physicallyCorrectLights = true;
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.0;
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
             // Add lights
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
             scene.add(ambientLight);
             
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
             directionalLight.position.set(5, 5, 5);
             directionalLight.castShadow = true;
             scene.add(directionalLight);
 
-            const backLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            const backLight = new THREE.DirectionalLight(0xffffff, 0.5);
             backLight.position.set(-5, 5, -5);
             scene.add(backLight);
 
-            const fillLight = new THREE.DirectionalLight(0xffffff, 0.5);
-            fillLight.position.set(0, -5, 0);
+            const fillLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.5);
             scene.add(fillLight);
 
             // Add controls
@@ -324,17 +333,6 @@
                     'burger_merged.obj',
                     function(object) {
                         model = object;
-                        
-                        // Add default materials
-                        object.traverse(function(child) {
-                            if (child instanceof THREE.Mesh) {
-                                child.material = new THREE.MeshStandardMaterial({
-                                    color: 0xE4A668,
-                                    roughness: 0.7,
-                                    metalness: 0.1
-                                });
-                            }
-                        });
 
                         // Center and scale the model
                         const box = new THREE.Box3().setFromObject(object);
@@ -429,5 +427,8 @@
             dropdown.classList.toggle('hidden');
         }
       </script>
+      
+      <!-- Add the likes.js script before the closing body tag -->
+      <script src="js/likes.js"></script>
     </body>
     </html>
