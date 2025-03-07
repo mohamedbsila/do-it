@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
     "prebuild": "mkdir -p dist",
-    "build": "NODE_ENV=production node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify",
     "start": "serve public"
   },
   "dependencies": {
