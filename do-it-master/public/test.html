@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste Buds</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#1F1F24',
+            'primary-orange': '#FFAE6D',
+            'secondary-green': '#95D2B3',
+            'accent-red': '#F28585',
+          }
+        }
+      }
+    }
+  </script>  
+
+</head>
+<body class="bg-[#F4ECE1] flex flex-col min-h-screen">
+  <header class="bg-primary-dark py-2.5">
+    <nav class="flex justify-between items-center px-[10%]">
+      <div class="hamburger md:hidden text-white text-3xl cursor-pointer" >☰</div>
+      
+      <a href="#" class="logo hidden md:block">
+        <img src="./images/chef-logo-design-cooking-inspiration-vectorv25_405409-original (1) (1) (1).svg" 
+             alt="Logo" class="h-12">
+      </a>
+
+      <ul class="nav-links fixed md:relative top-0 left-0 w-64 h-full md:w-auto md:h-auto bg-primary-dark/80 md:bg-transparent 
+          transform -translate-x-full md:transform-none transition-transform duration-300 z-50 flex flex-col md:flex-row 
+          gap-7 md:gap-8 pt-16 md:pt-0 pl-5 md:pl-0">
+        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Home</a></li>
+        <li><a href="#" class="text-white hover:text-primary-orange text-lg">About</a></li>
+        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Dishes</a></li>
+        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Restaurant</a></li>
+        <li><a href="#" class="text-white hover:text-primary-orange text-lg">Contact</a></li>
+      </ul>
+
+      <div class="nav-right flex items-center gap-4">
+        <div class="relative hidden sm:block">
+          <input type="text" placeholder="Search" class="bg-white rounded-none py-2 px-4 pr-12 focus:outline-none text-sm w-32 md:w-40 border border-orange-500 shadow-sm">
+          <button class="absolute right-1 top-1/2 transform -translate-y-1/2 p-1.5">
+              <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                  </path>
+              </svg>
+          </button>
+      </div>
+        <a href="#">
+          <svg class="w-6 h-6 text-[#FFAE6D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+          </svg>
+      </a>
+        <div class="profile-menu relative cursor-pointer" onclick="toggleProfileMenu()">
+          <img src="./images/profile.png" alt="Profile" class="w-10 h-10 rounded-full border-2 border-white">
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="container mx-auto py-8 px-6">
+  <div class="flex flex-col lg:flex-row lg:space-x-8">
+    <div class="lg:w-2/3">
+        <div class="bg-white p-6 rounded-none shadow-md mb-[10px]">
+            <h2 class="text-2xl font-bold mb-1">MY ORDERS</h2>
+            <p class="text-gray-600 mb-0">Your dishes will be delivered at lightning speed, so you can enjoy your meal fresh and without waiting!</p>
+        </div>
+        <div class="space-y-[1px]">
+            <div class="bg-white p-6 rounded-none shadow-md mt-0">
+                <div class="flex items-center space-x-4">
+                    <img alt="Spaghetti" class="w-[100px] h-[100px] rounded-none" src="https://storage.googleapis.com/a1aa/image/Wv70J3y8wXoSOq9wTY4BXIR4P4gssQ5-yS8dBE5kgE4.jpg"/>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">Spaghetti</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-xl font-bold">12,780 $</p>
+                                <i class="fas fa-edit text-yellow-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Al dente spaghetti coated in a fragrant tomato sauce, enhanced with a touch of black pepper, garnished with tender chicken pieces, and sprinkled with mint leaves for a fresh note.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            SPAGHETTI DELIGHT <i class="fas fa-map-marker-alt text-gray-500 ml-2"></i>
+                            <br/>
+                            <span class="text-yellow-500">#CSG4PZ7</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-none shadow-md">
+                <div class="flex items-center space-x-4">
+                    <img alt="Fried Chicken" class="w-[100px] h-[100px] rounded-none" src="https://storage.googleapis.com/a1aa/image/mJ4tZPZJruZTM3 sGphWdUoKwtWweOsWhyPcXhCqGK5c.jpg"/>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">Fried Chicken</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-xl font-bold">10,850 $</p>
+                                <i class="fas fa-edit text-yellow-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">A crispy fried chicken accompanied by mint and lemon, offering a combination of fresh and tangy flavors.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            CLUCK'N'ROLL 
+                            <i class="fas fa-map-marker-alt text-gray-500 ml-2"></i>
+                            <br/>
+                            <span class="text-yellow-500">#DQLQ9L8</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-none shadow-md">
+                <div class="flex items-center space-x-4">
+                    <img alt="Beef Burger" class="w-[100px] h-[100px] rounded-none" src="https://storage.googleapis.com/a1aa/image/MCrSiONnNsJQ6iEpgBe2J9PNGmEc4XSU0PJFIa9rx-Y.jpg"/>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">Beef Burger</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-xl font-bold">20.95 $</p>
+                                <i class="fas fa-edit text-yellow-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">A grilled beef steak with lettuce, tomato, onion, and melted cheese, enhanced by a homemade sauce, all nestled in a toasted soft bun.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            SALATA BURGER 
+                            <i class="fas fa-map-marker-alt text-gray-500 ml-2"></i>
+                            <br/>
+                            <span class="text-yellow-500">#D6WGP4Hs</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-none shadow-md">
+                <div class="flex items-center space-x-4">
+                    <img alt="Cheese Burger" class="w-[100px] h-[100px] rounded-none" src="https://storage.googleapis.com/a1aa/image/MCrSiONnNsJQ6iEpgBe2J9PNGmEc4XSU0PJFIa9rx-Y.jpg"/>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">Cheese Heaven</h3>
+                            <div class="flex items-center space-x-2">
+                                <p class="text-xl font-bold">41.90 $</p>
+                                <i class="fas fa-edit text-yellow-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">A juicy beef patty covered in melted cheese, paired with crisp lettuce, fresh tomato, and a creamy sauce, all nestled in a lightly toasted soft bun.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            CHEESE HEAVEN 
+                            <i class="fas fa-map-marker-alt text-gray-500 ml-2"></i>
+                            <br/>
+                            <span class="text-yellow-500">#SSY8R9D7</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="lg:w-1/3">
+            <div class="bg-white p-6 rounded-none shadow-lg sticky top-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800">TOTAL</h2>
+                    <p class="text-2xl font-bold text-primary-black">96.13 $</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                        <p class="text-gray-600 text-lg">Subtotal</p>
+                        <p class="text-gray-800 font-semibold">86.48 $</p>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                        <p class="text-gray-600 text-lg">Delivery fee</p>
+                        <p class="text-gray-800 font-semibold">9.65 $</p>
+                    </div>
+                    <div class="pt-2">
+                        <input class="w-full p-3 border border-gray-300 rounded-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" 
+                               placeholder="Add your location" 
+                               type="text"/>
+                    </div>
+                    <button class="w-full bg-secondary-green text-white font-bold py-3 rounded-none hover:bg-opacity-90 transition-all duration-300">
+                        PAYMENT
+                    </button>
+                    <div class="space-y-3">
+                        <p class="text-gray-600">We accept:</p>
+                        <div class="flex items-center space-x-3">
+                            <img alt="Visa" class="h-8 object-contain" src="https://storage.googleapis.com/a1aa/image/dR1xPswwRAvUrbj7vz2ELZu10AaJ0vgZ1v5GajunKCI.jpg"/>
+                            <img alt="PayPal" class="h-8 object-contain" src="https://storage.googleapis.com/a1aa/image/GQiXykN7VxGWj_IdX6fC05U8HLWCh1wsiYOU_h_APKA.jpg"/>
+                            <img alt="MasterCard" class="h-8 object-contain" src="https://storage.googleapis.com/a1aa/image/AQHyivjGGzuIcbghxdGW8VGSaBivt03fofmuKexlhY4.jpg"/>
+                            <img alt="American Express" class="h-8 object-contain" src="https://storage.googleapis.com/a1aa/image/YxZQECZI1IyNBHAI_pLBad351MnniThADaYuUf1zHTk.jpg"/>
+                        </div>
+                        <p class="text-gray-600 text-sm italic">Do you have a promotional code? Add it at the next step.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+  <footer class="bg-primary-dark text-white mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-12 md:flex md:justify-between md:gap-8">
+      <div class="mb-8 md:mb-0 md:max-w-xs">
+        <h3 class="text-lg font-semibold mb-4">TASTE BUDS</h3>
+        <p class="text-gray-300">Tunis, Ariana <br> Technopol Ghazela</p>
+        <p class="text-gray-300 mt-2">Phone: +216 25 356 031</p>
+        <p class="text-gray-300">Email: tasteBuds@gustavo.tn</p>
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="text-white hover:text-primary-orange"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white hover:text-primary-orange"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-primary-orange"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="mb-8 md:mb-0">
+        <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-primary-orange">Home</a></li>
+          <li><a href="#" class="hover:text-primary-orange">About us</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Dishes</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Restaurants</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Forum</a></li>
+        </ul>
+      </div>
+
+      <div class="mb-8 md:mb-0">
+        <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-primary-orange">Top Restaurants</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Top Dishes</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Delivery</a></li>
+          <li><a href="#" class="hover:text-primary-orange">Orders</a></li>
+          <li><a href="#" class="hover:text-primary-orange">3D Dishes</a></li>
+        </ul>
+      </div>
+
+      <div class="md:max-w-xs">
+        <h3 class="text-lg font-semibold mb-4">Our Newsletter</h3>
+        <p class="text-gray-300 mb-4">Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <div class="flex">
+          <input type="email" placeholder="Enter your email" 
+                 class="flex-1 px-4 py-2 rounded-none border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-orange" />
+          <button class="bg-accent-red text-white px-4 py-2 rounded-none">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center border-t border-gray-700 py-4">
+      <p class="text-sm">© Copyright TASTE BUDS All Rights Reserved</p>
+      <p class="text-sm">Designed by <span class="text-primary-orange font-bold">Gustavo-Group</span></p>
+    </div>
+  </footer>
+</body>
+</html>
